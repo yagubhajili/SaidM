@@ -1,0 +1,60 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+div{
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+    animation: div 5s linear infinite;
+
+}
+
+
+
+
+
+
+
+@keyframes div{
+    0%{
+        transform: translate(0);
+  
+
+    }
+    25%{
+      
+        transform: translate(calc(100vw - 100px) , 0);
+
+  
+
+    }
+    50%{
+        transform: translate(calc(100vw - 100px) , calc(100vh - 100px));
+
+
+    }
+
+    75%{
+  
+        transform: translate(0, calc(100vh - 100px));
+
+
+    }
+    100%{
+
+        transform: translate( 0);
+
+
+
+
+    }
+}
