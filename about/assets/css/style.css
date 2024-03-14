@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #1abc9c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+}
+
+.lines {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.paragraphs {
+    display: flex;
+    margin: 30px 0;
+    width: 450px;
+}
+
+.firstparagraph {
+    margin: 0 10px;
+}
+
+.about {
+    margin: 30px 0;
+}
+
+.line {
+    border: 2px solid white;
+    width: 100px;
+
+}
+
+.star {
+    margin: 0 15px;
+}
+
+button {
+    width: 105px;
+    height: 35px;
+    margin: 30px;
+    background-color: #1abc9c;
+
+}
+
+.btn {
+    
+    border: 3px solid white;
+    border-color: white;
+    color: white;
+    
+
+}

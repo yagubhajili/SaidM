@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+section {
+  background-color: whitesmoke;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h3 {
+  padding: 20px;
+}
+
+.banners {
+  display: flex;
+}
+
+.caption {
+  text-align: center;
+  padding: 30px;
+}
+
+.pictures {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.pictures p {
+  margin-bottom: 30px;
+}
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 30px;
+  outline: 7px solid rgb(255, 255, 255);
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(32, 108, 221);
+  margin-bottom: 30px;
+  transition: 350ms;
+}
+
+button:hover{
+    background-color: rgb(29, 198, 240);
+ 
+}
+
+footer{
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+
+footer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+footer div i{
+  border: 1px solid black;
+  border-radius: 50%;
+  text-align: center;
+  
+  padding: 5px;
+    
+    margin: 40px 0;
+    height: 30px;
+    width: 30px;
+    color: black;
+}
