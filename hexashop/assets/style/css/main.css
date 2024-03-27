@@ -10,7 +10,11 @@
 }
 
 header {
-  border-bottom: 2px dashed rgb(175, 170, 170);
+  background-color: white;
+  z-index: 50;
+  position: sticky;
+  top: 0;
+  max-width: 100%;
 }
 header .container-nav {
   max-width: 1140px;
@@ -30,6 +34,7 @@ header .container-nav .links-navbar ul li a {
 
 #photo-section {
   border-bottom: 2px dashed rgb(175, 170, 170);
+  border-top: 2px dashed rgb(175, 170, 170);
   padding: 60px 15px;
   display: grid;
   justify-content: space-between;
@@ -99,7 +104,8 @@ header .container-nav .links-navbar ul li a {
   right: 15px;
   left: 15px;
   bottom: 15px;
-  display: none;
+  transition: 0.5s;
+  opacity: 0;
 }
 #photo-section .baner-right-image-01 .hidden-text button {
   padding: 12px 25px;
@@ -109,7 +115,7 @@ header .container-nav .links-navbar ul li a {
   color: white;
 }
 #photo-section .baner-right-image-01:hover .hidden-text {
-  display: block;
+  opacity: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,7 +142,8 @@ header .container-nav .links-navbar ul li a {
   right: 15px;
   left: 15px;
   bottom: 15px;
-  display: none;
+  transition: 0.5s;
+  opacity: 0;
 }
 #photo-section .baner-right-image-02 .hidden-text button {
   padding: 12px 25px;
@@ -146,7 +153,7 @@ header .container-nav .links-navbar ul li a {
   color: white;
 }
 #photo-section .baner-right-image-02:hover .hidden-text {
-  display: block;
+  opacity: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,7 +180,8 @@ header .container-nav .links-navbar ul li a {
   right: 15px;
   left: 15px;
   bottom: 15px;
-  display: none;
+  transition: 0.5s;
+  opacity: 0;
 }
 #photo-section .baner-right-image-03 .hidden-text button {
   padding: 12px 25px;
@@ -183,7 +191,7 @@ header .container-nav .links-navbar ul li a {
   color: white;
 }
 #photo-section .baner-right-image-03:hover .hidden-text {
-  display: block;
+  opacity: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,7 +218,8 @@ header .container-nav .links-navbar ul li a {
   right: 15px;
   left: 15px;
   bottom: 15px;
-  display: none;
+  transition: 0.5s;
+  opacity: 0;
 }
 #photo-section .baner-right-image-04 .hidden-text button {
   padding: 12px 25px;
@@ -220,7 +229,7 @@ header .container-nav .links-navbar ul li a {
   color: white;
 }
 #photo-section .baner-right-image-04:hover .hidden-text {
-  display: block;
+  opacity: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -228,20 +237,175 @@ header .container-nav .links-navbar ul li a {
   gap: 15px;
 }
 
+#mens-section {
+  padding: 90px 0;
+}
 #mens-section .container {
   max-width: 1140px;
   margin: auto;
+}
+#mens-section .container .upper-text {
+  margin-bottom: 60px;
+}
+#mens-section .container .upper-text h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+#mens-section .container .upper-text p {
+  font-size: 14px;
+  color: #a1a1a1;
+  font-style: italic;
+  font-weight: 400;
 }
 #mens-section .container .men-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  position: relative;
+}
+#mens-section .container .men-content .fa-arrow-left {
+  position: absolute;
+  left: -75px;
+  padding: 15px;
+  border: 1px solid black;
+}
+#mens-section .container .men-content .fa-arrow-right {
+  right: -95px;
+  position: absolute;
+  padding: 15px;
+  border: 1px solid black;
+}
+#mens-section .container .men-content .content {
+  overflow: hidden;
+  position: relative;
 }
 #mens-section .container .men-content .content .rate {
   display: flex;
   justify-content: space-between;
 }
+#mens-section .container .men-content .content .rate h3 {
+  font-size: 22px;
+  color: #2a2a2a;
+  font-weight: 700;
+}
 #mens-section .container .men-content .content .rate ul {
   display: flex;
+}
+#mens-section .container .men-content .content .rate ul li {
+  font-size: 13px;
+}
+#mens-section .container .men-content .content .price p {
+  font-size: 18px;
+  color: #a1a1a1;
+  font-weight: 500;
+}
+#mens-section .container .men-content .content .hidden-links {
+  position: absolute;
+  transition: all 0.5s;
+  opacity: 0;
+  display: flex;
+  gap: 20px;
+}
+#mens-section .container .men-content .content .hidden-links i {
+  padding: 15px;
+  background-color: white;
+}
+#mens-section .container .men-content .content:hover .hidden-links {
+  bottom: 100px;
+  left: 80px;
+  opacity: 1;
+  text-align: center;
+}
+
+#explore-section {
+  padding: 90px 0;
+}
+#explore-section .container {
+  max-width: 1140px;
+  margin: auto;
+  gap: 30px;
+  display: grid;
+  grid-template-areas: "left-text left-text leather-bag top-image" "left-text left-text bottom-image different-type";
+}
+#explore-section .container .left-text {
+  grid-area: left-text;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#explore-section .container .left-text p {
+  color: #aaaaaa;
+  font-size: 14px;
+}
+#explore-section .container .left-text button {
+  max-width: 140px;
+  padding: 12px 25px;
+  margin-top: 35px;
+  background-color: white;
+  white-space: nowrap;
+  transition: 0.5s;
+}
+#explore-section .container .left-text button:hover {
+  background-color: #2a2a2a;
+  color: white;
+}
+#explore-section .container .quotes {
+  display: flex;
+}
+#explore-section .container .quotes p {
+  color: #2a2a2a;
+  font-style: italic;
+}
+#explore-section .container .quotes i {
+  margin-right: 10px;
+}
+#explore-section .container .leather-bag {
+  grid-area: leather-bag;
+}
+#explore-section .container .top-image {
+  grid-area: top-image;
+}
+#explore-section .container .top-image img {
+  width: 100%;
+  height: 100%;
+}
+#explore-section .container .bottom-image {
+  grid-area: bottom-image;
+}
+#explore-section .container .bottom-image img {
+  width: 100%;
+  height: 100%;
+}
+#explore-section .container .different-type {
+  grid-area: different-type;
+}
+#explore-section .container .text-explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+#explore-section .container .text-explore h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+#explore-section .container .text-explore p {
+  font-size: 14px;
+  font-style: italic;
+  color: #aaa;
+  font-weight: 500;
+}
+
+footer {
+  background-color: #2a2a2a;
+  padding: 90px 0;
+}
+footer .container {
+  max-width: 1140px;
+  margin: auto;
 }/*# sourceMappingURL=main.css.map */
