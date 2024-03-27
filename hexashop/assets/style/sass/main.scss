@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+header {
+  border-bottom: 2px dashed rgb(175, 170, 170);
+  .container-nav {
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    .links-navbar {
+      ul {
+        display: flex;
+        gap: 30px;
+        li {
+          a {
+            color: #212529;
+          }
+        }
+      }
+    }
+  }
+}
+
+#photo-section {
+  border-bottom: 2px dashed rgb(175, 170, 170);
+
+  padding: 60px 15px;
+  display: grid;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+  grid-template-areas:
+    "left-banner right1 right2"
+    "left-banner right3 right4";
+  .image-text {
+    color: white;
+    text-align: center;
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 16px;
+      font-style: italic;
+    }
+  }
+  .left-banner-image {
+    height: 80vh;
+    grid-area: left-banner;
+    width: 50vw;
+    padding: 0 85px;
+    display: flex;
+    align-items: center;
+    background: url(../../images/left-banner-image.jpg) no-repeat;
+    background-size: cover;
+
+    .for-text {
+      color: white;
+      h2 {
+        font-size: 52px;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 30px;
+        font-style: italic;
+      }
+      button {
+        color: white;
+        background-color: transparent;
+        border: 1px solid white;
+        padding: 12px 25px;
+      }
+    }
+  }
+  .baner-right-image-01 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38vh;
+
+    width: 22vw;
+    grid-area: right1;
+    background: url(../../images/baner-right-image-01.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .hidden-text {
+      background-color: rgba(42, 42, 42, 0.97);
+      color: white;
+      position: absolute;
+      text-align: center;
+      top: 15px;
+      right: 15px;
+      left: 15px;
+      bottom: 15px;
+
+      display: none;
+      button {
+        padding: 12px 25px;
+        max-width: 50%;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+      }
+    }
+  }
+  .baner-right-image-01:hover .hidden-text {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  .baner-right-image-02 {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38vh;
+
+    grid-area: right2;
+    width: 22vw;
+    background: url(../../images/baner-right-image-02.jpg) no-repeat;
+    background-size: cover;
+    .hidden-text {
+      background-color: rgba(42, 42, 42, 0.97);
+      color: white;
+      position: absolute;
+      text-align: center;
+      top: 15px;
+      right: 15px;
+      left: 15px;
+      bottom: 15px;
+
+      display: none;
+      button {
+        padding: 12px 25px;
+        max-width: 50%;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+      }
+    }
+  }
+  .baner-right-image-02:hover .hidden-text {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  .baner-right-image-03 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: right3;
+    height: 38vh;
+    position: relative;
+
+    width: 22vw;
+    background: url(../../images/baner-right-image-03.jpg) no-repeat;
+    background-size: cover;
+    .hidden-text {
+      background-color: rgba(42, 42, 42, 0.97);
+      color: white;
+      position: absolute;
+      text-align: center;
+      top: 15px;
+      right: 15px;
+      left: 15px;
+      bottom: 15px;
+
+      display: none;
+      button {
+        padding: 12px 25px;
+        max-width: 50%;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+      }
+    }
+  }
+  .baner-right-image-03:hover .hidden-text {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  .baner-right-image-04 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: right4;
+    height: 38vh;
+    position: relative;
+
+    width: 22vw;
+    background: url(../../images/baner-right-image-04.jpg) no-repeat;
+    background-size: cover;
+    .hidden-text {
+      background-color: rgba(42, 42, 42, 0.97);
+      color: white;
+      position: absolute;
+      text-align: center;
+      top: 15px;
+      right: 15px;
+      left: 15px;
+      bottom: 15px;
+
+      display: none;
+      button {
+        padding: 12px 25px;
+        max-width: 50%;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+      }
+    }
+  }
+  .baner-right-image-04:hover .hidden-text {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+#mens-section {
+  .container {
+    max-width: 1140px;
+    margin: auto;
+    .men-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      .content {
+        .rate {
+          display: flex;
+          justify-content: space-between;
+          ul {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
