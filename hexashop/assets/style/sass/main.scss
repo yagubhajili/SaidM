@@ -422,11 +422,60 @@ header {
   }
 }
 
-footer{
+footer {
   background-color: #2a2a2a;
-  padding: 90px 0;
-  .container{
+  .container {
+    padding: 60px 0;
+
     max-width: 1140px;
     margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+    border-bottom: 1px solid #a1a1a1;
+    .part-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      h3 {
+        font-size: 16px;
+        color: #fff;
+        font-weight: 700;
+      }
+      a {
+        font-size: 14px;
+        transition: 350ms;
+        &:hover {
+          color: #a1a1a1;
+        }
+      }
+      img {
+        max-width: 195px;
+      }
+    }
+  }
+  .bottom-footer {
+    padding: 30px 0;
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+    gap: 10px;
+    ul {
+      display: flex;
+      i {
+        padding: 15px;
+        transition: 350ms;
+        &:hover {
+          color: #cc6666;
+        }
+      }
+    }
   }
 }
