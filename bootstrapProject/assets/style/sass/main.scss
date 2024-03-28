@@ -1,0 +1,33 @@
+ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  li {
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.start-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.col-12 {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    max-width: 500px;
+  }
+  p {
+    max-width: 400px;
+  }
+}
+a {
+    text-decoration: none;
+  }

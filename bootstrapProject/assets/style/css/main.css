@@ -1,0 +1,32 @@
+ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.start-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.col-12 {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.col-12 h2 {
+  max-width: 500px;
+}
+.col-12 p {
+  max-width: 400px;
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */
