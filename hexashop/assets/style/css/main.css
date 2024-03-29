@@ -279,6 +279,8 @@ header .container-nav .links-navbar ul li a {
 }
 #mens-section .container .men-content .content {
   overflow: hidden;
+}
+#mens-section .container .men-content .content .content-image {
   position: relative;
 }
 #mens-section .container .men-content .content .rate {
@@ -314,8 +316,8 @@ header .container-nav .links-navbar ul li a {
   padding: 15px;
   background-color: white;
 }
-#mens-section .container .men-content .content:hover .hidden-links {
-  bottom: 100px;
+#mens-section .container .men-content .content-image:hover .hidden-links {
+  bottom: 40px;
   left: 80px;
   opacity: 1;
   text-align: center;

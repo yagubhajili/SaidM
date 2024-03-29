@@ -292,7 +292,10 @@ header {
       }
       .content {
         overflow: hidden;
-        position: relative;
+        // position: relative;
+        .content-image {
+          position: relative;
+        }
         .rate {
           display: flex;
           justify-content: space-between;
@@ -330,8 +333,8 @@ header {
           }
         }
       }
-      .content:hover .hidden-links {
-        bottom: 100px;
+      .content-image:hover .hidden-links {
+        bottom: 40px;
         left: 80px;
         opacity: 1;
         text-align: center;
