@@ -302,6 +302,8 @@ header .container-nav .links-navbar ul li a {
   font-weight: 500;
 }
 #mens-section .container .men-content .content .hidden-links {
+  bottom: 0;
+  left: 80px;
   position: absolute;
   transition: all 0.5s;
   opacity: 0;

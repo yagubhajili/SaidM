@@ -316,6 +316,8 @@ header {
           }
         }
         .hidden-links {
+          bottom: 0;
+          left: 80px;
           position: absolute;
           transition: all 0.5s;
           opacity: 0;
