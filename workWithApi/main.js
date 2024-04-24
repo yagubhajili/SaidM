@@ -57,6 +57,12 @@ const getDataBtn = document.querySelector('.getDataBtn')
 const createBtn = document.querySelector('.createBtn')
 const deleteBtn = document.querySelector('.deleteBtn')
 
+const modal = document.querySelector(".modals")
+
+const modalTitle = document.querySelector(".modalTitle")
+const modalPrice = document.querySelector(".modalPrice")
+const modalCategory = document.querySelector(".modalCategory")
+
 
 
 
@@ -73,35 +79,59 @@ function createtable(data) {
   data.forEach(element => {
 
     tableBody.innerHTML += `
-        <tr data=${element.id}>
+        <tr data-id=${element.id} class="rows">
         <th scope="row">${element.id}</th>
-        <td>${element.title}</td>
-        <td>${element.category}</td>
-        <td>${element.price}</td>
-        
+        <td class="title">${element.title}</td>
+        <td class="price">${element.price}</td>
+        <td class="category">${element.category}</td>
         <td><button class="deletebtns">X</button></td>
-
+        <td><button class="editBtns">edit</button></td>
          </tr>`
 
 
 
-
-
-
   });
+
+  let deletebtns = document.querySelectorAll('.deletebtns')
+  for (const deletebtn of deletebtns) {
+    deletebtn.addEventListener('click', async (e) => {
+      let prodId = e.target.closest(".rows").dataset.id
+
+      removeProduct(prodId)
+
+    })
+  }
+
+
+  let editBtns = document.querySelectorAll('.editBtns')
+  for (const editBtn of editBtns) {
+    editBtn.addEventListener('click', async (e) => {
+      let prodId = e.target.closest(".rows").dataset.id
+      let tableRow = e.target.closest(".rows")
+      let title = tableRow.querySelector(".title").textContent
+      let price = tableRow.querySelector(".price").textContent
+      let category = tableRow.querySelector(".category").textContent
+
+      modal.classList.remove('d-none')
+      modalTitle.value = title
+      modalPrice.innnerText = price
+      modalCategory.innnerText = category
+
+    })
+  }
 }
-let deletebtns = document.querySelectorAll('.deletebtns')
-for (const deletebtn of deletebtns) {
-  deletebtn.addEventListener('click', async (e) => {
-
-    console.log(deletebtn)
-    await deleteById("http://localhost:3000/products", e.target.getAttribute('data'))
 
 
 
 
-  })
+function removeProduct(id) {
+
+  axios.delete(`http://localhost:3000/products/${id}`)
+
 }
+
+
+
 
 // AddcalbackBtn.addEventListener('click', getData(createtable))
 
