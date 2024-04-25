@@ -1,0 +1,29 @@
+.forInput {
+    display: flex;
+    width: 50%;
+    gap: 30px;
+}
+
+.forInput input {
+    width: 800px;
+    height: 50px;
+    padding: 10px;
+}
+
+.forInput input:focus {
+    outline: red;
+}
+
+.forInput button {
+    width: 100px;
+    padding: 10px 15px;
+    background-color: #0d6dfd6c;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.positionabsolute {
+    display: flex;
+    justify-content: center;
+}

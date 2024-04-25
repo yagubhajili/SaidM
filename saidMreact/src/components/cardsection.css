@@ -1,0 +1,12 @@
+.cardsHolder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 80px 0;
+}
+
+.cardsHolder .card {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+}

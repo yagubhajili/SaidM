@@ -1,0 +1,21 @@
+.holder {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100vw;
+    background: url(../assets/bg-masthead.jpg) center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.heroHolder{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.heroHolder h2{
+    margin: 20px 0;
+    font-size: 40px;
+}

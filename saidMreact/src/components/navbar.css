@@ -1,0 +1,13 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.signUp {
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+}
