@@ -10,3 +10,6 @@
     flex-direction: column;
     text-align: center;
 }
+.cardsHolder .card i{
+    color: rgb(0, 195, 255);
+}
