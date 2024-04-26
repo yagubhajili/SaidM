@@ -1,0 +1,15 @@
+.photoHolder {
+    background: url(../assets/bg-masthead.jpg) center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+.photoHolder h2{
+    margin-top: 100px;
+    color: white;
+}

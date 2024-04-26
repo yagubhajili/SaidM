@@ -1,0 +1,30 @@
+.users {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.users .user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.users .user .userImage {
+    height: 200px;
+    width: 200px;
+
+}
+
+.users .user .userImage img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.userHolder {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
