@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
@@ -8,6 +9,17 @@ const Home = ({ fakeStore }) => {
     const [filteredProduct, setFilteredProducts] = useState([])
     const [searchValue, setSearchValue] = useState('')
     const [addNewProd, setAddNewProd] = useState(false)
+    const [inputVals, setInputVals] = useState({
+        id: uuidv4(),
+        image: '',
+        title: '',
+        price: '',
+        category: '',
+        rating: {
+            rate: '',
+            count: ''
+        }
+    })
     useEffect(() => {
         setFilteredProducts(fakeStore)
     }, [fakeStore])
@@ -104,7 +116,10 @@ const Home = ({ fakeStore }) => {
                             id="password"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required=""
-
+                            value={inputVals.image}
+                            onChange={(e) => {
+                                setInputVals({ ...inputVals, image: e.target.value })
+                            }}
                         />
                     </div>
                     <div className="mb-5">
@@ -119,7 +134,10 @@ const Home = ({ fakeStore }) => {
                             id="password"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required=""
-
+                            value={inputVals.title}
+                            onChange={(e) => {
+                                setInputVals({ ...inputVals, title: e.target.value })
+                            }}
                         />
                     </div>
                     <div className="mb-5">
@@ -134,7 +152,10 @@ const Home = ({ fakeStore }) => {
                             id="password"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required=""
-
+                            value={inputVals.price}
+                            onChange={(e) => {
+                                setInputVals({ ...inputVals, price: e.target.value })
+                            }}
                         />
                     </div>
                     <div className="mb-5">
@@ -149,7 +170,10 @@ const Home = ({ fakeStore }) => {
                             id="password"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required=""
-
+                            value={inputVals.category}
+                            onChange={(e) => {
+                                setInputVals({ ...inputVals, category: e.target.value })
+                            }}
                         />
                     </div>
                     <div className="mb-5">
@@ -164,7 +188,10 @@ const Home = ({ fakeStore }) => {
                             id="password"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required=""
-
+                            value={inputVals.rating.rate}
+                            onChange={(e) => {
+                                setInputVals({ ...inputVals, rating: { rate: e.target.value } })
+                            }}
                         />
                     </div>
                     <div className="mb-5">
@@ -179,10 +206,18 @@ const Home = ({ fakeStore }) => {
                             id="password"
                             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             required=""
-
+                            value={inputVals.rating.count}
+                            onChange={(e) => {
+                                setInputVals({ ...inputVals, rating: { count: e.target.value } })
+                            }}
                         />
                     </div>
                     <button
+                        onClick={async () => {
+                            inputVals.title = ''
+                            await axios.post('https://northwind.vercel.app/api/suppliers', inputVals)
+                            setAddNewProd(false)
+                        }}
                         type="submit"
                         className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 
@@ -294,8 +329,6 @@ const Home = ({ fakeStore }) => {
                                                         </td>
                                                     </tr>
                                                 })}
-
-
                                             </tbody>
                                         </table>
                                     </div>
