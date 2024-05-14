@@ -1,0 +1,9 @@
+.holder{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 40px;
+}
+.error{
+    color: red;
+}

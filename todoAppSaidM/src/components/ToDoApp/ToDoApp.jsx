@@ -1,49 +1,21 @@
 import React, { useEffect, useState } from 'react'
-
-
-
+import { useDispatch, useSelector } from 'react-redux'
 
 const ToDoApp = () => {
 
+    const basket = useSelector((state) => state.basket.basket)
 
+    console.log(basket)
 
-    const [toDos, setToDos] = useState(JSON.parse(localStorage.getItem("storage")) || [])
-    const [inputValue, setInputValue] = useState('')
-    useEffect(() => {
-        localStorage.setItem('storage', JSON.stringify(toDos))
-    }, [toDos])
 
     return (
         <div>
-            <div>
-                <input type="text"
-
-                    value={inputValue}
-                    onChange={(e) => {
-                        setInputValue(e.target.value)
-                    }
-                    }
-                />
-                <button onClick={() => {
-                    console.log(inputValue)
-                    // localStorage.setItem('storage', JSON.stringify())
-                    setToDos([...toDos, { inputValue }])
-                    setInputValue('')
-                }}>Add</button>
-            </div>
+            <h1>basket</h1>
             <ul>
-                {toDos.map(element => {
-                    return <li>
-                        {element.inputValue}
-                    </li>
+                {basket &&basket.map(el => {
+                   return <li>{el.name}</li>
                 })}
-
             </ul>
-
-
-
-
-
         </div>
     )
 }

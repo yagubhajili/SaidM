@@ -1,0 +1,29 @@
+.line {
+    text-decoration: line-through;
+}
+
+.line-none {
+
+    text-decoration: none;
+}
+
+.lis {
+    display: flex;
+    align-items: center;
+}
+
+.delete {
+    margin: 0 15px;
+    height: 30px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+}
+
+.edit {
+    margin: 0 15px;
+    height: 30px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+}
