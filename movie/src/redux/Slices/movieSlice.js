@@ -12,6 +12,9 @@ export const movieSlice = createSlice({
         setMovies: (state, action) => {
             state.movies = action.payload
         },
+        addMovies: (state, action) => {
+            state.movies=[...state.movies,{...action.payload}]
+        },
         setfavorites: (state, action) => {
             let elemIndex = state.favorites.findIndex(el => el.id == action.payload.id)
             if (elemIndex == -1) {
@@ -25,6 +28,6 @@ export const movieSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setMovies, setfavorites } = movieSlice.actions
+export const { setMovies, setfavorites, addMovies } = movieSlice.actions
 
 export default movieSlice.reducer
